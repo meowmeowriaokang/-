@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cat Hotel</title>
+<title>เหมียวเหมียว เรียวกัง</title>
 
 <style>
 body{
@@ -17,6 +17,7 @@ body{
     height:100vh;
 }
 
+/* การ์ด */
 .card{
     width:90%;
     max-width:360px;
@@ -27,26 +28,31 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
 
+/* โลโก้ */
 .logo{
-    width:140px;
-    height:140px;
+    width:130px;
+    height:130px;
     object-fit:cover;
     border-radius:50%;
     margin-bottom:15px;
     border:4px solid #f2c38b;
+    animation: float 3s ease-in-out infinite;
 }
 
+/* ชื่อโรงแรม */
 h1{
     color:#2c3e50;
     font-size:26px;
     margin-bottom:5px;
 }
 
+/* คำอธิบาย */
 p{
     color:#777;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
+/* ปุ่มจอง */
 .btn{
     display:block;
     background:#e28a35;
@@ -60,8 +66,49 @@ p{
 }
 
 .btn:hover{
-    transform:scale(1.03);
+    transform:scale(1.05);
     background:#cf7725;
+}
+
+/* ปุ่มล่าง */
+.contact{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.line-btn, .call-btn{
+    flex:1;
+    padding:14px;
+    border-radius:14px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    transition:0.2s;
+}
+
+/* LINE */
+.line-btn{
+    background:#06C755;
+}
+
+/* โทร */
+.call-btn{
+    background:#3498db;
+}
+
+/* hover */
+.line-btn:hover,
+.call-btn:hover{
+    transform:scale(1.05);
+}
+
+/* animation โลโก้ลอย */
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-6px);}
+    100%{transform:translateY(0px);}
 }
 </style>
 </head>
@@ -70,19 +117,34 @@ p{
 
 <div class="card">
 
-    <!-- 🔴 ใส่โลโก้ตรงนี้ -->
     <img src="https://i.ibb.co/7NT6sXVk/image.jpg" class="logo">
 
     <h1>🐱 เหมียวเหมียว เรียวกัง 🐱</h1>
 
-    <p>Cat Hotel • โรงแรมแมว</p>
+    <p>Cat Hotel • โรงแรมแมวพรีเมียม</p>
 
-    <!-- 🔵 ปุ่มจอง -->
+    <!-- ปุ่มจอง -->
     <a href="https://forms.gle/nBFQ6CDVnS5sTEjL7"
        target="_blank"
        class="btn">
        จองเลย 🐾
     </a>
+
+    <!-- LINE + โทร -->
+    <div class="contact">
+
+        <a href="https://lin.ee/xxxx"
+           target="_blank"
+           class="line-btn">
+           💬 LINE
+        </a>
+
+        <a href="tel:0982782764"
+           class="call-btn">
+           📞 โทร
+        </a>
+
+    </div>
 
 </div>
 
