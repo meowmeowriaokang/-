@@ -72,9 +72,41 @@ p{
 
 /* ปุ่มล่าง */
 .contact{
-    display:flex;
-    gap:10px;
-    margin-top:15px;
+     margin-top:15px;
+}
+
+.contact-main{
+    display:block;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#3498db;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+.phone-list{
+    display:none;
+    margin-top:8px;
+}
+
+.phone-list.show{
+    display:block;
+}
+
+.phone{
+    display:block;
+    margin-top:8px;
+    padding:12px;
+    border-radius:12px;
+    background:#eaf4fb;
+    color:#2c3e50;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .line-btn, .call-btn{
@@ -131,26 +163,29 @@ p{
     </a>
 
     <!-- LINE + โทร -->
-    <div class="contact">
+   <div class="contact">
 
-        <a href="https://line.me/ti/p/~0982782764"
-   target="_blank"
-   class="line-btn">
-   💬 LINE
+    <button class="contact-main" onclick="showPhones()">
+        📞 ติดต่อเรา
+    </button>
+
+    <div class="phone-list" id="phoneList">
+
+        <a href="tel:0982782764" class="phone">
+            📞 098-278-2764
         </a>
 
-        <a href="tel:0982782764"
-           class="call-btn">
-           📞 โทร
-        </a>
-         <a href="tel:0812345678"
-       class="call-btn">
-           📞 โทร
+        <a href="tel:0812345678" class="phone">
+            📞 081-234-5678
         </a>
 
     </div>
-
 </div>
-
+    <script>
+function showPhones() {
+    document.getElementById("phoneList").classList.toggle("show");
+}
+</script>
+</div>
 </body>
 </html>
